@@ -32,7 +32,7 @@ def predict():
         ph = request.form["ph"]
         rainfall = request.form["rainfall"]
         potassium = request.form["potassium"]
-    df = pd.read_csv(r'C:\Users\SreeHarsha\Downloads\Crop_recommendation.csv')
+    df = pd.read_csv('Crop_recommendation.csv')
 
     features = df[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
     target = df['label']
